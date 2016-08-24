@@ -1,10 +1,9 @@
 # 1. Load Your Libraries
 require 'nokogiri'
-require 'open-uri'
 require 'pry'
 
 # 2. Load Your Document
-document = Nokogiri::HTML(open("https://newyork.craigslist.org/search/roo"))
+document = Nokogiri::HTML(File.read("rooms.html"))
 
 # 3. Define Your Main Selector
 price_selector = "span.price"
